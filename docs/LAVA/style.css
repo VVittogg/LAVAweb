@@ -1,0 +1,244 @@
+/* The navigation bar */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #2f0202;
+    height: 200vh;
+}
+@media (max-width: 800px) {
+    body {
+      width: 100%;
+    }
+  }
+
+.navbar {
+
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    transition: 0.5s;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    font-size: 4vh;
+    float: right;
+    display: block;
+    color: antiquewhite;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change background on mouse-over */
+  .navbar a:hover {
+    background: #f36c51;
+    color: antiquewhite;
+    transition: 0.7s;
+  }
+  
+  /* Main content */
+  
+
+#logo {
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    max-width: 15vh;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+.header {
+    margin-top: 15vh;
+    color: antiquewhite;
+    display: flex; /* Use flexbox to create a flexible layout */
+    align-items: center; /* Center vertically within the header */
+    justify-content: center;
+}
+.headerImage{
+    max-width: 25vh;
+
+}
+
+.headerText {
+    font-size: 10vh;
+    margin-right: 10px; /* Add spacing between text and image */
+
+    
+}
+
+
+  
+
+
+
+  
+  
+
+  
+  /* Responsive layout - makes a one column-layout instead of two-column layout */
+  @media (max-width: 800px) {
+    .header {
+      flex-direction: column;
+    }
+  }
+
+h1 {
+    text-align: center;
+    padding-top: 25px;
+    margin: 0 auto;
+    color: antiquewhite;
+    width: 50%;
+}
+
+@media (max-width: 800px) {
+    h1 {
+      width: 90%;
+    }
+  }
+
+
+          /*4 BUTTONS A BOTTOM START */
+
+.icons {
+  display: flex; /* Use flexbox to create a flexible layout */
+    align-items: center; /* Center vertically within the header */
+    justify-content: center;
+  margin-top: 50px;
+  padding: 0;
+
+
+}
+
+.icons a{
+  text-decoration: none;
+}
+
+.buttonFooter {
+  height: 80px; 
+  font-size: 25px;
+  padding: 10px 10px;
+  margin: 0 15px;
+  width: 150px;
+  color: antiquewhite;
+  background-color: #d82200;
+  border:2px solid #f2a444;  
+  border-radius: 50px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.textLink {
+  margin: 0 15px;
+
+}
+
+.icon {
+  height: 100px;
+  margin: 0 15px;
+}
+
+@media (max-width: 800px) {
+  .icons {
+    flex-direction: column;
+  }
+  .icon {
+    margin: 10px 0;
+  }
+  .textLink {
+    margin: 10px 0;
+  }
+}
+
+          /*4 BUTTONS A BOTTOM START */
+
+
+
+
+
+
+.mo-fire {
+    height: auto;
+    position: fixed;
+    left: 2.5%; 
+    bottom: -50vh;
+    z-index: 4;
+    width: 105%;
+
+  }
+  
+  #svg-view {
+      width: 252px;
+      height: 125px;
+      left: 0px;
+  }
+  
+  .mo-fire svg {
+    width: 100%;
+    height: auto;
+    position:relative;
+    right:40px;
+  }
+  .flame {
+    animation-name: flameDisappear;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: 0.5;
+    transform-origin: 45% 45% 0;
+  }
+  .flame.one {
+    animation-delay: 1s;
+    animation-duration: 3s;
+  }
+  .flame.two{
+    animation-duration: 5s;
+    animation-delay: 1s;
+  }
+  
+  
+  .flame-main {
+    animation-name: flameMovement;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  .flame-main.one {
+    animation-duration: 2.2s;
+    animation-delay: 1s;
+  }
+  .flame-main.two {
+    animation-duration: 2s;
+    animation-delay: 1s;
+  }
+  .flame-main.three {
+    animation-duration: 2.1s;
+    animation-delay: 3s;
+  }
+  .flame-main.four {
+    animation-duration: 3.2s;
+    animation-delay: 4s;
+  }
+  .flame-main.five {
+    animation-duration: 2.5s;
+    animation-delay: 5s;
+  }
+  @keyframes flameMovement {
+    50% {
+      transform: scale(0.98,1.0) translate(0, 2px) rotate(-1deg);
+    }
+  }
+  @keyframes flameDisappear {
+    0%{
+      transform: translate(0) rotate(180deg);
+    }
+    50% {
+       opacity: 1;
+    }
+    100% {
+      transform: translate(-10px, -40px) rotate(180deg);
+      opacity: 0;
+    }
+}
